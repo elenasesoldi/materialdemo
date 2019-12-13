@@ -1,0 +1,33 @@
+.mat-button-toggle-appearance-standard
+.mat-button-toggle-label-content {
+    text-transform: uppercase !important;
+}
+
+#div1, #div2 {
+    display:flex;
+}
+
+#div1 {
+    float: left;
+    width: 20%;
+
+    mat-button-toggle-group {
+        min-width: 80%;
+        max-width: 100%;
+        margin: 0 auto;        
+    }
+
+    .mat-button-toggle-group-appearance-standard, .mat-button-toggle-standalone.mat-button-toggle-appearance-standard {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+#div2 {
+    float: right;
+    width: 80%;
+
+    > * {
+        width: 100%;
+    }
+}

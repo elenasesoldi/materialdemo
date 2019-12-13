@@ -1,0 +1,11 @@
+#datePicker {
+    display: flex;
+    flex-direction: column;
+
+    > * {
+        background-color: #7b4e6f;
+        width: 80%;
+        margin: auto;
+        padding: 15px;
+    }
+}

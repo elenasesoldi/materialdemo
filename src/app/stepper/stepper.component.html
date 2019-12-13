@@ -1,0 +1,13 @@
+<mat-horizontal-stepper linear #stepper>
+    <mat-step 
+      *ngFor="let s of steppers; let f = first; let l = last" 
+      [label]="s.label" 
+      [completed]="s.completed"
+      [optional]="s.optional">
+        <p> {{s.label}} Details</p>
+        <div>
+            <button *ngIf="!f" mat-button matStepperPrevious>Back</button>
+            <button *ngIf="!l" mat-button matStepperNext (click)="completa(s)">Next</button>
+        </div>
+    </mat-step>
+</mat-horizontal-stepper>

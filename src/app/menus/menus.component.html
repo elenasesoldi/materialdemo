@@ -1,0 +1,66 @@
+<div id="menuBtnGroup">
+    <button mat-flat-button [matMenuTriggerFor]="appMenu">Menu</button>
+    <button mat-flat-button [matMenuTriggerFor]="appMenu2">Menu</button>
+    <div>
+        <button 
+            mat-flat-button 
+            [matMenuTriggerFor]="lazyMenu" 
+            [matMenuTriggerData]="vishwasData">
+            Vishwas
+        </button>
+        <button 
+            mat-flat-button 
+            [matMenuTriggerFor]="lazyMenu" 
+            [matMenuTriggerData]="codevolutionData">
+            Codevolution
+        </button>
+    </div>    
+</div>
+
+
+<mat-menu #appMenu="matMenu" class="menu">
+    <button mat-menu-item [matMenuTriggerFor]="subMenuF">FrontEnd</button>
+    <button mat-menu-item [matMenuTriggerFor]="subMenuB">BackEnd</button>
+</mat-menu>
+
+<mat-menu #subMenuF="matMenu" class="sub-menu">
+    <button mat-menu-item>Angular</button>
+    <button mat-menu-item>React</button>
+    <button mat-menu-item>Vue</button>
+</mat-menu>
+
+<mat-menu #subMenuB="matMenu" class="sub-menu">
+    <button mat-menu-item>Java EE</button>
+    <button mat-menu-item>Php</button>
+</mat-menu>
+
+<!-------------------------------------------------------------->
+
+<mat-menu #appMenu2="matMenu" class="menu" xPosition="before" yPosition="above">
+    <button mat-menu-item [matMenuTriggerFor]="subMenuF">FrontEnd</button>
+    <button mat-menu-item [matMenuTriggerFor]="subMenuB">BackEnd</button>
+</mat-menu>
+
+<mat-menu #subMenuF2="matMenu" class="sub-menu">
+    <button mat-menu-item>Angular</button>
+    <button mat-menu-item>React</button>
+    <button mat-menu-item>Vue</button>
+</mat-menu>
+
+<mat-menu #subMenuB2="matMenu" class="sub-menu">
+    <button mat-menu-item>Java EE</button>
+    <button mat-menu-item>Php</button>
+</mat-menu>
+
+<!-------------------------------------------------------------->
+
+<mat-menu #lazyMenu="matMenu" class="menu">
+    <ng-template matMenuContent let-name="name" let-hobby="hobby">
+        <button mat-menu-item>Settings</button>
+        <button mat-menu-item>Hobby is {{hobby}}</button>
+        <button mat-menu-item>Logout {{name}}</button>
+    </ng-template>
+</mat-menu>
+
+
+

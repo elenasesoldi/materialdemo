@@ -1,0 +1,17 @@
+#checkbox {
+    display: flex;
+    flex-direction: column;
+    > * {
+        width: 80%;
+        margin: auto;
+        padding: 15px;
+    }
+
+    mat-radio-group {
+        display: flex;
+        flex-direction: row;
+        mat-radio-button {
+            padding: 15px;
+        }
+    }
+}

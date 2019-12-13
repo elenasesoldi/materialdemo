@@ -1,0 +1,11 @@
+#autocomplete {
+    display: flex;
+    flex-direction: column;
+    form {
+        width: 80%;
+        background: rgb(49, 29, 45);
+        .mat-input-element {
+            color: white;
+        }
+    }
+}

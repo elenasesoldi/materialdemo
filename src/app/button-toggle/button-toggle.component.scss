@@ -1,0 +1,27 @@
+
+$dark_blue: #050e41;
+$blue: #3f51b5;
+$faded_blue: #6872af;
+
+
+div.section {
+    margin: 20px 0;
+    border: solid 1px $dark_blue;
+    
+    &.flex {
+        display: flex;
+        justify-content: space-around;        
+    }
+
+    .mat-button-toggle-appearance-standard {
+        background-color: $faded_blue;
+    }
+    
+    .mat-button-toggle-checked {
+        background-color: $blue;
+    }
+    
+    .example-selected-value {
+        margin: 15px 0;
+    }
+}

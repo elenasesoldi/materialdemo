@@ -1,0 +1,13 @@
+<div id="checkbox">
+    <mat-checkbox>
+        Default
+    </mat-checkbox>
+
+    <mat-checkbox labelPosition="before">
+        labelPosition="before"
+    </mat-checkbox>
+
+    <mat-radio-group>
+        <mat-radio-button *ngFor="let f of fw" [value]="f">{{f}}</mat-radio-button>
+    </mat-radio-group>
+</div>

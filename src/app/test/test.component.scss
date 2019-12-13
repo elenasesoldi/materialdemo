@@ -1,0 +1,25 @@
+#test {
+    width: 100%;
+    .section {
+        background: lightblue;
+        margin-bottom: 50px;
+        h1 {
+            color: #ff0090;
+        }
+    }
+
+    .flex {
+        display: flex;
+        &.space-between {
+            justify-content: space-between;
+        }
+        &.space-around {
+            justify-content: space-around;
+        }
+
+        span {
+            height: fit-content;    
+            margin: auto 0;        
+        }
+    }
+}

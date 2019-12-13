@@ -1,0 +1,53 @@
+<div class="section">
+    Default
+    <div class="badges">
+        <span matBadge=5>Default</span>
+        <span matBadge=5 matBadgeOverlap="false">Not Overlap</span>
+    </div>    
+</div>
+
+<div class="section">
+    Change Position
+    <div class="badges">
+        <span matBadge=5 matBadgePosition="below">Below</span>
+        <span matBadge=5 matBadgePosition="before">Before</span>        
+        <span matBadge=5 matBadgePosition="below before">Below Before</span>
+    </div>    
+</div>
+
+<div class="section">
+        Change Size
+    <div class="badges">
+        <span matBadge=5 matBadgeSize="small">Small</span>
+        <span matBadge=5 matBadgeSize="medium">Medium</span>
+        <span matBadge=5 matBadgeSize="large">Large</span>
+    </div>    
+</div>
+
+<div class="section">
+    Change Color
+    <div class="badges">
+        <span matBadge=5 matBadgeColor="primary">Primary</span>
+        <span matBadge=5 matBadgeColor="warn">Warn</span>
+        <span matBadge=5 matBadgeColor="accent">Accent</span>
+    </div>    
+</div>
+
+<div class="section">
+    Dinamic Notifications
+    <div class="badges">
+        <span [matBadge]="notifications" [matBadgeHidden]="notifications == 0">Notifications</span>
+    </div>    
+
+    <div class="example-button-row">
+        <button mat-icon-button  color="primary" aria-label="Add notification" (click)="addNotification()">
+          <mat-icon>add</mat-icon>
+        </button>
+        <button mat-icon-button color="primary" aria-label="Remove notification" [disabled]="notifications == 0" (click)="removeNotification()">
+          <mat-icon>remove</mat-icon>
+        </button>
+     </div>
+
+</div>
+
+

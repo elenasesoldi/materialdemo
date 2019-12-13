@@ -1,0 +1,31 @@
+<div id="datePicker">
+    <mat-form-field>
+        <input matInput [matDatepicker]="myDatePicker">
+        <mat-datepicker-toggle [for]="myDatePicker" matSuffix></mat-datepicker-toggle>
+        <mat-datepicker #myDatePicker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput [matDatepicker]="myDatePicker2">
+        <mat-datepicker-toggle [for]="myDatePicker2" matSuffix></mat-datepicker-toggle>
+        <mat-datepicker #myDatePicker2 startView="year"></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput [matDatepicker]="myDatePicker3">
+        <mat-datepicker-toggle [for]="myDatePicker3" matSuffix></mat-datepicker-toggle>
+        <mat-datepicker #myDatePicker3 startView="multi-year"></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput [matDatepicker]="myDatePicker4" [min]="minDate" [max]="maxDate">
+        <mat-datepicker-toggle [for]="myDatePicker4" matSuffix></mat-datepicker-toggle>
+        <mat-datepicker #myDatePicker4></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput [matDatepicker]="myDatePicker5" [matDatepickerFilter]="dateFilter">
+        <mat-datepicker-toggle [for]="myDatePicker5" matSuffix></mat-datepicker-toggle>
+        <mat-datepicker #myDatePicker5></mat-datepicker>
+    </mat-form-field>
+</div>

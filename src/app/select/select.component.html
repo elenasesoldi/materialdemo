@@ -1,0 +1,68 @@
+<div id="select">
+    <mat-form-field>
+        <mat-select>
+            <mat-label>Topic</mat-label>
+            <mat-option *ngFor="let wo of webOptions" [value]="wo">{{wo.name}}</mat-option>            
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Topic</mat-label>
+        <mat-select [(value)]="selectedWebOption">                
+            <mat-option *ngFor="let wo of webOptions" [value]="wo">{{wo.name}}</mat-option>            
+        </mat-select>              
+    </mat-form-field>
+
+    <div *ngIf="selectedWebOption">
+        <h1>{{selectedWebOption.name}}</h1>
+        {{selectedWebOption.description}}
+    </div>  
+
+    <mat-form-field>
+            <mat-label>Topic</mat-label>
+            <mat-select [(value)]="selectedWebOption2">    
+                <mat-option>None</mat-option>            
+                <mat-option *ngFor="let wo of webOptions" [value]="wo">{{wo.name}}</mat-option>            
+            </mat-select>              
+        </mat-form-field>
+    
+    <div *ngIf="selectedWebOption2">
+        <h1>{{selectedWebOption2.name}}</h1>
+        {{selectedWebOption2.description}}
+    </div>
+    
+    <mat-form-field>
+            <mat-label>Topic</mat-label>
+            <mat-select [(value)]="selectedOption3">    
+                <mat-option>None</mat-option>   
+                <mat-optgroup label="Web">
+                    <mat-option *ngFor="let wo of webOptions" [value]="wo">{{wo.name}}</mat-option> 
+                </mat-optgroup> 
+                <mat-optgroup label="Mobile">
+                    <mat-option *ngFor="let mo of mobileOptions" [value]="mo">{{mo.name}}</mat-option> 
+                </mat-optgroup>                              
+            </mat-select>              
+        </mat-form-field>
+    
+    <div *ngIf="selectedOption3">
+        <h1>{{selectedOption3.name}}</h1>
+        {{selectedOption3.description}}
+    </div>
+
+    <mat-form-field>
+            <mat-label>Topic</mat-label>
+            <mat-select [(value)]="selectedOption4" multiple>    
+                <mat-option>None</mat-option>   
+                <mat-optgroup label="Web">
+                    <mat-option *ngFor="let wo of webOptions" [value]="wo">{{wo.name}}</mat-option> 
+                </mat-optgroup> 
+                <mat-optgroup label="Mobile">
+                    <mat-option *ngFor="let mo of mobileOptions" [value]="mo">{{mo.name}}</mat-option> 
+                </mat-optgroup>                              
+            </mat-select>              
+        </mat-form-field>
+    
+    <div *ngFor="let so of selectedOption4">
+        <h1>{{so.name}}</h1>
+        {{so.description}}
+    </div>
+</div>

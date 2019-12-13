@@ -1,0 +1,47 @@
+<div class="section flex">
+    <div>
+        <mat-button-toggle #toggleBtn1>1</mat-button-toggle>
+        {{toggleBtn1.checked}}
+    </div>
+    <div>
+        <mat-button-toggle #toggleBtn2 checked>2</mat-button-toggle>
+        {{toggleBtn2.checked}}
+    </div>  
+    <div>
+        <mat-button-toggle #toggleBtn3 disableRipple>3</mat-button-toggle>
+        {{toggleBtn3.checked}}
+    </div>    
+    <div>
+        <mat-button-toggle #toggleBtn4 disabled>4</mat-button-toggle>
+        {{toggleBtn4.checked}}
+    </div> 
+</div>
+
+<div class="section">
+    <mat-button-toggle-group #group="matButtonToggleGroup">
+        <mat-button-toggle value="left" aria-label="Text align left">
+          <mat-icon>format_align_left</mat-icon>
+        </mat-button-toggle>
+        <mat-button-toggle value="center" aria-label="Text align center">
+          <mat-icon>format_align_center</mat-icon>
+        </mat-button-toggle>
+        <mat-button-toggle value="right" aria-label="Text align right">
+          <mat-icon>format_align_right</mat-icon>
+        </mat-button-toggle>
+        <mat-button-toggle value="justify" aria-label="Text align justify">
+          <mat-icon>format_align_justify</mat-icon>
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+      <div class="example-selected-value">Selected value: {{group.value}}</div>
+</div>
+
+<div class="section">
+    <mat-button-toggle-group #toggleGroup="matButtonToggleGroup" multiple>
+        <mat-button-toggle value="angular">Angular</mat-button-toggle>
+        <mat-button-toggle value="react">React</mat-button-toggle>
+        <mat-button-toggle value="vue">Vue</mat-button-toggle>
+    </mat-button-toggle-group>
+    <div class="example-selected-value">Selected value: {{toggleGroup.value}}</div>
+</div>
+
+

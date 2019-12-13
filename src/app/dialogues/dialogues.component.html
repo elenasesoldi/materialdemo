@@ -1,0 +1,12 @@
+<div id="dialogues">
+    
+    <div *ngIf="!name">Please, log in.
+        <button *ngIf="!name" mat-raised-button (click)="login()">
+            Login
+        </button>
+    </div>
+    <div *ngIf="name">Hi {{name}}!</div>
+    <button *ngIf="name" mat-raised-button (click)="openDialog()">
+        Open dialog
+    </button>
+</div>
